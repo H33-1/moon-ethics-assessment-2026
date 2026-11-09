@@ -1,0 +1,1 @@
+window.ASSESSMENT_CONFIG = { endpoint: 'https://script.google.com/macros/s/AKfycbxC6IknlOsco9SPb5jF2ZNCUCSuMrtn8n2g7ErdqvR2zy9bBqjTCjf5v0JDRTRb5kFr/exec' };
