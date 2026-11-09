@@ -23,3 +23,5 @@ $('expand').onclick=()=>{const f=activeField?.isConnected?activeField:document.q
 
 
 if(window.ASSESSMENT_CONFIG?.endpoint){document.querySelector('.notice').textContent='답안은 제출 버튼을 누르면 교사용 스프레드시트에 저장됩니다. 입력 중에는 이 기기에 임시저장됩니다. 같은 브라우저에서 제출 답안을 수정하고 다시 제출할 수 있습니다. 긴 글은 입력칸을 선택한 뒤 ‘입력칸 크게 쓰기’를 이용하세요.';$('confirm').querySelector('p').textContent='작성한 학교·학년·반·번호·이름과 답안을 교사용 스프레드시트에 제출합니다. 다시 제출하면 기존 답안이 갱신됩니다.';$('submit').textContent='스프레드시트에 제출';}
+
+$('newAnswer').onclick=()=>{if(!window.confirm('이 기기의 현재 답안을 비우고 새 답안을 작성할까요? 이미 스프레드시트에 제출한 답안은 유지됩니다.'))return;data={};submitted=null;remoteAuth=null;page=1;$('editSubmitted').hidden=true;$('done').hidden=true;$('viewport').hidden=false;document.querySelector('nav').hidden=false;activeField=null;save();render();window.scrollTo(0,0)};
